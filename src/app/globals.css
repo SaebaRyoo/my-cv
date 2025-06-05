@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a191d;
+  --foreground: #bfbfbf;
 }
 
 @theme inline {
@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a191d;
+    --foreground: ##bfbfbf;
   }
 }
 
@@ -23,4 +23,132 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 从左边弹出的动画 */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 从右边弹出的动画 */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 动画类 */
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+  animation-delay: 0.3s; /* 第二个元素延迟出现 */
+}
+
+/* 初始状态 - 隐藏元素 */
+.animate-slide-in-left,
+.animate-slide-in-right {
+  opacity: 0;
+}
+
+.expertise-frontend::after {
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(
+    65deg,
+    #df058d 0%,
+    #df058d 100%,
+    rgba(255, 209, 0, 0) 100%
+  );
+}
+
+.expertise-backend-development::after {
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(
+    65deg,
+    #2c49d8 0%,
+    #2c49d8 100%,
+    rgba(255, 209, 0, 0) 100%
+  );
+}
+
+.expertise-cicd-development::after {
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(
+    65deg,
+    #ff6b2b 0%,
+    #ff6b2b 100%,
+    rgba(255, 209, 0, 0) 100%
+  );
+}
+
+.expertise-description-container::after {
+  opacity: 0.3;
+  content: "";
+  width: 0;
+  height: 50%;
+  position: absolute;
+  background-color: white;
+  border: 0.1px solid white;
+  /* bottom: 17%; */
+  left: 18px;
+  bottom: 0;
+  transform: translateY(-54%);
+}
+
+.expertise-description::before {
+  content: "<h3>";
+  margin-bottom: 5px;
+  opacity: 0.3;
+  color: white;
+  display: block;
+  margin-left: -35px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.expertise-description::after {
+  content: "</h3>";
+  margin-bottom: 5px;
+  content: "</h3>";
+  opacity: 0.3;
+  color: #fff;
+  margin-left: -35px;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
 }
