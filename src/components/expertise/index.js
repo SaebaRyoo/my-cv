@@ -28,26 +28,30 @@ export default function Expertise() {
   ];
 
   return (
-    <section className="min-h-screen w-full bg-[#1a191d] text-white py-20 px-20">
+    <section className="min-h-screen w-full text-white py-10 sm:py-20 px-4 sm:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* 标题 */}
-        <h2 className="text-6xl md:text-7xl font-bold text-center mb-16">
+        <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 sm:mb-16">
           My Expertise
         </h2>
 
         <section className="w-full">
-          <div className="flex items-stretch justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
             {/* 前端 */}
-            <div className="w-1/3">
-              <div className="flex flex-col h-full border-solid border-[#a3a3a3] border-t-2 border-l-2 border-r-1 border-b-2 p-10">
-                <div aria-label="headline" className="flex justify-start">
+            <div className="w-full">
+              <div className="flex flex-col h-full border-solid border-[#a3a3a3] border-t-2 border-l-2 lg:border-r-1 border-r-2 border-b-2 lg:border-b-2 p-6 sm:p-10">
+                <div
+                  aria-label="headline"
+                  className="flex justify-start items-start"
+                >
                   <Image
                     src="/icon-react.svg"
                     alt="icon-react"
                     width={42}
                     height={42}
+                    className="flex-shrink-0"
                   />
-                  <h5 className="text-2xl font-bold text-white ml-8">
+                  <h5 className="text-xl sm:text-2xl font-bold text-white ml-4 sm:ml-8">
                     <span className="expertise-frontend relative z-0">
                       Frontend Dev
                     </span>
@@ -57,24 +61,29 @@ export default function Expertise() {
                 </div>
 
                 <div className="expertise-description-container relative mt-4 flex-1">
-                  <div className="expertise-description text-white font-normal font-sans pl-10">
+                  <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
                     Passionate about UI/UX. Over 5 years of development
                     experience in HTML, CSS, JS, React and NextJS frameworks.
                   </div>
                 </div>
               </div>
             </div>
+
             {/* 后端 */}
-            <div className="w-1/3">
-              <div className="flex flex-col h-full border-solid border-[#a3a3a3] border-t-2 border-l-1 border-r-1 border-b-2 p-10">
-                <div aria-label="headline" className="flex justify-start">
+            <div className="w-full">
+              <div className="flex flex-col h-full border-solid border-[#a3a3a3] border-t-0 lg:border-t-2 border-l-2 lg:border-l-1 lg:border-r-1 border-r-2 border-b-2 p-6 sm:p-10">
+                <div
+                  aria-label="headline"
+                  className="flex justify-start items-start"
+                >
                   <Image
                     src="/icon-computer.svg"
                     alt="icon-computer"
                     width={42}
                     height={42}
+                    className="flex-shrink-0"
                   />
-                  <h5 className="text-2xl font-bold text-white ml-8">
+                  <h5 className="text-xl sm:text-2xl font-bold text-white ml-4 sm:ml-8">
                     <span className="expertise-backend-development relative z-0">
                       Software
                     </span>
@@ -84,7 +93,7 @@ export default function Expertise() {
                 </div>
 
                 <div className="expertise-description-container relative mt-4 flex-1">
-                  <div className="expertise-description text-white font-normal font-sans pl-10">
+                  <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
                     Experienced in developing both front back end technologies.
                     Python, Ruby, JavaScript, TypeScript.
                   </div>
@@ -92,18 +101,23 @@ export default function Expertise() {
               </div>
             </div>
 
-            <div className="w-1/3">
-              <div className="flex flex-col h-full border-solid border-[#a3a3a3] border-t-2 border-l-1 border-r-1 border-b-2 p-10">
-                <div aria-label="headline" className="flex justify-start">
+            {/* Flutter */}
+            <div className="w-full">
+              <div className="flex flex-col h-full border-solid border-[#a3a3a3] border-t-0 lg:border-t-2 border-l-2 lg:border-l-1 border-r-2 lg:border-r-2 border-b-2 p-6 sm:p-10">
+                <div
+                  aria-label="headline"
+                  className="flex justify-start items-start"
+                >
                   <Image
                     src="/icon-computer.svg"
                     alt="icon-computer"
                     width={42}
                     height={42}
+                    className="flex-shrink-0"
                   />
-                  <h5 className="text-2xl font-bold text-white ml-8">
+                  <h5 className="text-xl sm:text-2xl font-bold text-white ml-4 sm:ml-8">
                     <span className="expertise-cicd-development relative z-0">
-                      Fullter Dev
+                      Flutter Dev
                     </span>
                     <br />
                     Android, iOS
@@ -111,7 +125,7 @@ export default function Expertise() {
                 </div>
 
                 <div className="expertise-description-container relative mt-4 flex-1">
-                  <div className="expertise-description text-white font-normal font-sans pl-10">
+                  <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
                     Skilled in developing hybrid mobile apps and cross-platform
                     solutions using the Flutter framework.
                   </div>
@@ -122,9 +136,9 @@ export default function Expertise() {
         </section>
 
         <div className="flex justify-center">
-          <div className="mt-[-100px]">
+          <div className="mt-[-50px] sm:mt-[-100px]">
             <Image
-              className="opacity-20"
+              className="opacity-20 w-full max-w-[320px] sm:max-w-[640px]"
               src="/html-bg.png"
               alt=""
               width={640}

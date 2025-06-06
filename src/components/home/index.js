@@ -33,29 +33,38 @@ export default function Home() {
     };
   }, []);
 
+  const scrollOneScreen = () => {
+    const viewportHeight = window.innerHeight;
+    window.scrollTo({
+      top: viewportHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       ref={root}
-      className="h-[86vh] w-full flex flex-col items-center justify-center relative"
+      className="h-[86vh] w-full flex flex-col items-center justify-center relative px-4"
     >
       <div
         aria-label="description"
-        className="flex flex-col items-center justify-center translate-y-[-14vh] text-white"
+        className="flex flex-col items-center justify-center translate-y-[-14vh] text-white text-center"
       >
-        <div className="logo font-bold text-[10vh] animate-slide-in-left">
+        <div className="logo font-bold text-4xl sm:text-6xl md:text-8xl lg:text-[10vh] animate-slide-in-left">
           Hi, I&apos;m Ryo Zhu
         </div>
-        <div className="font-bold text-[5vh] animate-slide-in-right">
+        <div className="font-bold text-xl sm:text-3xl md:text-4xl lg:text-[5vh] animate-slide-in-right mt-2">
           Software Engineer & Front end Developer
         </div>
       </div>
 
       <div
         aria-label="scroll-down"
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[10vh] h-[10vh] hover:cursor-pointer flex items-center justify-center"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[8vh] h-[8vh] sm:w-[10vh] sm:h-[10vh] hover:cursor-pointer flex items-center justify-center group"
+        onClick={scrollOneScreen}
       >
         <Image
-          className="scroll-down"
+          className="scroll-down group-hover:scale-110 transition-transform duration-300"
           src="/scroll-down.svg"
           alt="scroll-down"
           width={100}

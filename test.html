@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>流星效果</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="meteorCanvas"></canvas>
+
+    <script>
+      const canvas = document.getElementById("meteorCanvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const meteors = [];
+
+      function randomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+
+      function createMeteor() {
+        const meteor = {
+          x: Math.random() * canvas.width,
+          y: 0,
+          length: Math.random() * 80 + 20,
+          speed: Math.random() * 2 + 2,
+          alpha: Math.random() * (0.5 - 0.1) + 0.1,
+          color: randomColor(), // 为每个流星设置随机颜色
+        };
+        meteors.push(meteor);
+      }
+
+      function updateMeteors() {
+        for (let i = meteors.length - 1; i >= 0; i--) {
+          const meteor = meteors[i];
+          meteor.y += meteor.speed;
+          if (meteor.y > canvas.height) {
+            meteors.splice(i, 1);
+          }
+        }
+      }
+
+      function drawMeteors() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        meteors.forEach((meteor) => {
+          ctx.globalAlpha = meteor.alpha;
+          ctx.beginPath();
+          ctx.moveTo(meteor.x, meteor.y);
+          ctx.lineTo(meteor.x, meteor.y - meteor.length);
+          ctx.strokeStyle = meteor.color; // 使用随机颜色
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        });
+        ctx.restore();
+      }
+
+      function animate() {
+        drawMeteors();
+        updateMeteors();
+        requestAnimationFrame(animate);
+      }
+
+      setInterval(createMeteor, 100); // 每100毫秒生成一个流星
+      animate();
+    </script>
+  </body>
+</html>
