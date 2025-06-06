@@ -61,9 +61,11 @@ export default function Expertise() {
                 </div>
 
                 <div className="expertise-description-container relative mt-4 flex-1">
-                  <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
-                    Passionate about UI/UX. Over 5 years of development
-                    experience in HTML, CSS, JS, React and NextJS frameworks.
+                  <div className="expertise-label-line-wrapper relative">
+                    <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
+                      Passionate about UI/UX. Over 5 years of development
+                      experience in HTML, CSS, JS, React and NextJS frameworks.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -93,9 +95,11 @@ export default function Expertise() {
                 </div>
 
                 <div className="expertise-description-container relative mt-4 flex-1">
-                  <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
-                    Experienced in developing both front back end technologies.
-                    Python, Ruby, JavaScript, TypeScript.
+                  <div className="expertise-label-line-wrapper relative">
+                    <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
+                      Experienced in developing both front back end
+                      technologies. Python, Ruby, JavaScript, TypeScript.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -125,9 +129,11 @@ export default function Expertise() {
                 </div>
 
                 <div className="expertise-description-container relative mt-4 flex-1">
-                  <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
-                    Skilled in developing hybrid mobile apps and cross-platform
-                    solutions using the Flutter framework.
+                  <div className="expertise-label-line-wrapper relative">
+                    <div className="expertise-description text-white font-normal font-sans pl-6 sm:pl-10 text-sm sm:text-base">
+                      Skilled in developing hybrid mobile apps and
+                      cross-platform solutions using the Flutter framework.
+                    </div>
                   </div>
                 </div>
               </div>

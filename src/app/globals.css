@@ -116,7 +116,7 @@ body {
   );
 }
 
-.expertise-description-container::after {
+.expertise-label-line-wrapper::after {
   opacity: 0.3;
   content: "";
   width: 0;
@@ -124,10 +124,9 @@ body {
   position: absolute;
   background-color: white;
   border: 0.1px solid white;
-  /* bottom: 17%; */
-  left: 18px;
+  left: 20px;
   bottom: 0;
-  transform: translateY(-54%);
+  transform: translateY(-50%);
 }
 
 .expertise-description::before {
