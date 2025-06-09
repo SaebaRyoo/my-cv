@@ -118,9 +118,6 @@ export default function Contact() {
           <p className="text-gray-400 text-sm">
             Ryo Zhu <span className="text-purple-400">©2025</span>
           </p>
-          <p className="text-gray-500 text-xs mt-2">
-            Made with ❤️ using Next.js & Tailwind CSS
-          </p>
         </div>
       </div>
 

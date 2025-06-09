@@ -34,7 +34,11 @@ export default function Project() {
             >
               {type}
               <sup className="text-xs ml-1 opacity-60">
-                {String(index + 1).padStart(2, "0")}
+                {type === "All"
+                  ? projectData.length
+                  : projectData.filter(
+                      (project) => project.projectType === type
+                    ).length}
               </sup>
               {activeFilter === type && (
                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#66d9ed]"></div>
@@ -59,14 +63,16 @@ function ProjectCard({ project }) {
     <Link href={`/project/${project.id}`} className="group block">
       <div className="bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 hover:border-[#66d9ed]/50 transition-all duration-300 hover:transform hover:scale-105">
         {/* 项目图片 */}
-        <div className="relative aspect-video overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+        <div className="relative w-full overflow-hidden">
+          <div className="relative w-full h-0 pb-[60%]">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-contain bg-gray-900 transition-transform duration-300 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
         </div>
 
