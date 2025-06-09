@@ -8,7 +8,7 @@ export const experienceData = [
     duration: "2024.7 - Present",
     logo: "",
     description:
-      "在这段时间中，参与了很多项目的开发。比如Soca、FameEx等项目。还参与了多个项目的维护工作。",
+      "在这段时间中，参与了很多项目的开发。比如Soca、FameEx等项目相关的开发。还参与了多个项目的维护工作，如参与RollIn项目中迁移react-testing-library单测库。",
     technologies: [
       "Next.js",
       "Tailwind",
@@ -59,7 +59,8 @@ export const experienceData = [
     website: "",
     duration: "2018.5 - 2019.7",
     logo: "",
-    description: "负责开发酒店官网以及酒店管理后台。",
+    description:
+      "负责开发酒店官网以及酒店管理后台。在官网项目中基于Express实现ssr，优化网站SEO。在管理后台项目中，基于React实现酒店前台的房间选定等功能。",
     technologies: ["React", "Node.js", "Express", "MySQL"],
   },
 ];
