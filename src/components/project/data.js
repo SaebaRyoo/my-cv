@@ -49,6 +49,23 @@ export const projectData = [
     noLinksText:
       "如想查看该项目，可通过移动端《饿了么》APP —— 我的 —— 我的钱包 —— 借钱 来查看详情",
   },
+  {
+    id: "ibuy",
+    image: "/imgs/ibuy/1.png",
+    images: [
+      "/imgs/ibuy/1.png",
+      "/imgs/ibuy/2.png",
+      "/imgs/ibuy/3.png",
+      "/imgs/ibuy/4.png",
+    ],
+    title: "ibuy购物商城-个人项目",
+    description:
+      "该项目是一个全栈电商项目，采用前后端分离的模式。前端基于Nextjs，后端基于Nestjs。目前已完成大部分主流程，支持商品展示、搜索、下单、支付、商品管理等功能",
+    projectType: "Nest.js",
+    technologies: ["Nest.js", "Next,js", "Postgres", "Redis"],
+    link: "https://ibuy.xin/",
+    github: "https://github.com/SaebaRyoo/ibuy-portal-backend",
+  },
 ];
 
 export const projectTypes = ["All"].concat([

@@ -2,7 +2,7 @@ export const experienceData = [
   {
     id: 1,
     position: "Next.js全栈工程师",
-    company: "Work for Myself",
+    company: "远程工作",
     location: "Remote",
     website: "",
     duration: "2024.7 - Present",
