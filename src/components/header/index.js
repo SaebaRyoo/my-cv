@@ -1,32 +1,33 @@
 "use client";
 import { useState } from "react";
-
-const navItems = [
-  {
-    label: "Home",
-    target: "home",
-  },
-  {
-    label: "Expertise",
-    target: "expertise",
-  },
-  {
-    label: "Projects",
-    target: "projects",
-  },
-  {
-    label: "Experience",
-    target: "experience",
-  },
-  {
-    label: "Contact",
-    target: "contact",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations("Navigation");
 
+  const navItems = [
+    {
+      label: t("home"),
+      target: "home",
+    },
+    {
+      label: t("expertise"),
+      target: "expertise",
+    },
+    {
+      label: t("projects"),
+      target: "projects",
+    },
+    {
+      label: t("experience"),
+      target: "experience",
+    },
+    {
+      label: t("contact"),
+      target: "contact",
+    },
+  ];
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

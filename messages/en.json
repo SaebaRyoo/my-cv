@@ -1,0 +1,113 @@
+{
+  "Home": {
+    "title": "Home"
+  },
+  "Navigation": {
+    "home": "Home",
+    "expertise": "Expertise",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "HomeSection": {
+    "greeting": "Hi, I'm Ryo Zhu",
+    "subtitle": "Software Engineer & Front end Developer"
+  },
+  "ExpertiseSection": {
+    "title": "My Expertise",
+    "skills": {
+      "frontend": {
+        "title": "Frontend Dev",
+        "subtitle": "React, NextJS",
+        "description": "Over 5 years of experience in HTML, CSS, JavaScript, React and NextJS framework development."
+      },
+      "software": {
+        "title": "Software",
+        "subtitle": "Development",
+        "description": "Familiar with backend technologies, including Node.js (Nestjs, Express, Koa), Python, Java."
+      },
+      "devops": {
+        "title": "Devops",
+        "subtitle": "Docker, Github Actions",
+        "description": "Familiar with Docker, GitHub Actions, Jenkins and other DevOps tools and processes."
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "My Projects",
+    "clickToView": "Click to view details",
+    "moreCount": "+{count} more",
+    "projects": {
+      "FameEX": {
+        "title": "FameEX-Trading Platform",
+        "description": "FameEX-Trading Platform, a cryptocurrency trading platform based on Next.js and Go. Provides a variety of popular cryptocurrency trading, such as BTC, ETH, USDT, etc."
+      },
+      "Soca": {
+        "title": "Soca-AI Job Platform",
+        "description": "Soca is an AI job platform based on React.js and Java that helps you modify your resume and find jobs that are better suited to you by scanning the web."
+      },
+      "eleme-loan": {
+        "title": "Eleme-Loan Platform",
+        "description": "Eleme-Loan Platform, a mobile h5 page based on React.js and Java, implements all functions of the loan platform, including identity authentication, loan application, loan review, loan repayment, etc.",
+        "noLinksText": "To view this project, you can access it through the mobile app 'Eleme' — My — My Wallet — Borrow Money for details"
+      },
+      "ibuy": {
+        "title": "ibuy Shopping Mall-Personal Project",
+        "description": "This project is a full-stack e-commerce project with front-end and back-end separation. The front-end is based on Nextjs and the back-end is based on Nestjs. Most of the main processes have been completed, supporting product display, search, ordering, payment, product management and other functions."
+      }
+    }
+  },
+  "ExperienceSection": {
+    "title": "Professional Experience",
+    "experiences": {
+      "remote": {
+        "position": "Full Stack Next.js Engineer",
+        "company": "Remote Work",
+        "location": "Remote",
+        "duration": "2024.7 - Present",
+        "description": "During this time, I participated in the development of many projects. Such as Soca, FameEx and other related projects. Also participated in the maintenance of multiple projects, such as participating in the RollIn project to migrate react-testing-library unit test library."
+      },
+      "farben": {
+        "position": "Full Stack Node.js Engineer",
+        "company": "Farben Information",
+        "location": "Shanghai",
+        "duration": "2023.5 - 2024.5",
+        "description": "At Farben Information, I participated in the development of a project management platform. A management platform based on React.js and Express. I participated in most of the front-end development and part of the back-end development of the project. Such as requirements management, project management, product management, procurement management and other pages. As well as permission management, user management, role management and other interface design and implementation."
+      },
+      "beyondsoft": {
+        "position": "Senior Frontend Developer",
+        "company": "Beyondsoft",
+        "location": "Hangzhou",
+        "duration": "2019.8 - 2023.4",
+        "description": "Participated in the development of multiple projects, including React and Java-based credit loan platforms and related management backends. In these two projects, I was mainly responsible for front-end development, including mobile adaptation, function implementation, performance optimization, etc. Worked closely with product managers to optimize conversion funnels and implement A/B testing frameworks to drive growth plans."
+      },
+      "chitu": {
+        "position": "Frontend Developer",
+        "company": "Chitu Network Technology",
+        "location": "Nanjing",
+        "duration": "2018.5 - 2019.7",
+        "description": "Responsible for developing hotel official websites and hotel management backends. In the official website project, SSR is implemented based on Express to optimize website SEO. In the management backend project, hotel front desk room selection and other functions are implemented based on React."
+      }
+    }
+  },
+  "ContactSection": {
+    "title": "Let's Connect",
+    "wechatId": "WeChat ID: wowzqy",
+    "footer": "Ryo Zhu ©2025"
+  },
+  "ProjectDetailPage": {
+    "backToProjects": "Back to Projects",
+    "projectGallery": "Project Gallery",
+    "technologiesUsed": "Technologies Used",
+    "viewLiveProject": "View Live Project",
+    "viewSourceCode": "View Source Code",
+    "noLinksText": "No demo links or source code available"
+  },
+  "ProjectModal": {
+    "gallery": "Gallery",
+    "technologiesUsed": "Technologies Used",
+    "viewLiveProject": "View Live Project",
+    "viewSourceCode": "View Source Code",
+    "noLinksText": "No demo links or source code available"
+  }
+}

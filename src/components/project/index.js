@@ -2,10 +2,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { projectData, projectTypes } from "./data";
+import { useTranslations } from "next-intl";
+import { useProjectData, useProjectTypes } from "@/utils/projectData";
 
 export default function Project() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const t = useTranslations("ProjectSection");
+  const projectData = useProjectData();
+  const projectTypes = useProjectTypes();
 
   const filteredProjects =
     activeFilter === "All"
@@ -17,7 +21,7 @@ export default function Project() {
       <div className="max-w-7xl mx-auto">
         {/* 标题 */}
         <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 sm:mb-16">
-          My Projects
+          {t("title")}
         </h2>
 
         {/* 过滤导航 */}
@@ -59,6 +63,8 @@ export default function Project() {
 }
 
 function ProjectCard({ project }) {
+  const t = useTranslations("ProjectSection");
+
   return (
     <Link href={`/project/${project.id}`} className="group block">
       <div className="bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 hover:border-[#66d9ed]/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -103,14 +109,14 @@ function ProjectCard({ project }) {
             ))}
             {project.technologies.length > 3 && (
               <span className="text-xs px-2 py-1 text-gray-500">
-                +{project.technologies.length - 3} more
+                {t("moreCount", { count: project.technologies.length - 3 })}
               </span>
             )}
           </div>
 
           {/* 链接 */}
           <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-500">Click to view details</span>
+            <span className="text-sm text-gray-500">{t("clickToView")}</span>
             <svg
               className="w-5 h-5 text-[#66d9ed] transform group-hover:translate-x-1 transition-transform duration-300"
               fill="none"

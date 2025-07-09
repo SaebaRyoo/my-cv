@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const [showWeChatModal, setShowWeChatModal] = useState(false);
+  const t = useTranslations("ContactSection");
 
   const contactLinks = [
     {
@@ -87,9 +89,7 @@ export default function Contact() {
     <section className="w-full bg-[#1a191d] text-white py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Contact Title */}
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12">
-          Let&apos;s Connect
-        </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-12">{t("title")}</h2>
 
         {/* Social Links Grid */}
         <div className="flex justify-center items-center gap-8 mb-16 max-w-2xl mx-auto">
@@ -115,9 +115,7 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="text-center">
-          <p className="text-gray-400 text-sm">
-            Ryo Zhu <span className="text-purple-400">©2025</span>
-          </p>
+          <p className="text-gray-400 text-sm">{t("footer")}</p>
         </div>
       </div>
 
@@ -164,7 +162,7 @@ export default function Contact() {
                 />
               </div>
 
-              <p className="text-gray-500 text-xs">微信号：wowzqy</p>
+              <p className="text-gray-500 text-xs">{t("wechatId")}</p>
             </div>
           </div>
         </div>

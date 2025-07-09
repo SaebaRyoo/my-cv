@@ -1,10 +1,13 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { experienceData } from "./data";
+import { useTranslations } from "next-intl";
+import { useExperienceData } from "@/utils/experienceData";
 
 export default function Experience() {
   const [expandedItem, setExpandedItem] = useState(null);
+  const t = useTranslations("ExperienceSection");
+  const experienceData = useExperienceData();
 
   const toggleItem = (id) => {
     setExpandedItem(expandedItem === id ? null : id);
@@ -15,7 +18,7 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto">
         {/* 标题 */}
         <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-12 sm:mb-20">
-          Professional Experience
+          {t("title")}
         </h2>
 
         {/* 经验列表 */}

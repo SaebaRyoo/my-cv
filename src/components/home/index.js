@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { animate, createScope, createSpring } from "animejs";
 import { useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
   const root = useRef(null);
   const scope = useRef(null);
+  const t = useTranslations("HomeSection");
 
   useEffect(() => {
     // 确保 root.current 存在后再创建 scope
@@ -51,10 +53,10 @@ export default function Home() {
         className="flex flex-col items-center justify-center translate-y-[-14vh] text-white text-center"
       >
         <div className="logo font-bold text-4xl sm:text-6xl md:text-8xl lg:text-[10vh] animate-slide-in-left">
-          Hi, I&apos;m Ryo Zhu
+          {t("greeting")}
         </div>
         <div className="font-bold text-xl sm:text-3xl md:text-4xl lg:text-[5vh] animate-slide-in-right mt-2">
-          Software Engineer & Front end Developer
+          {t("subtitle")}
         </div>
       </div>
 

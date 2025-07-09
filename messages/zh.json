@@ -1,0 +1,113 @@
+{
+  "Home": {
+    "title": "主页"
+  },
+  "Navigation": {
+    "home": "主页",
+    "expertise": "专业技能",
+    "projects": "项目作品",
+    "experience": "工作经历",
+    "contact": "联系方式"
+  },
+  "HomeSection": {
+    "greeting": "你好，我是 RyoZhu",
+    "subtitle": "软件工程师 & 前端开发者"
+  },
+  "ExpertiseSection": {
+    "title": "我的技能",
+    "skills": {
+      "frontend": {
+        "title": "前端开发",
+        "subtitle": "React, NextJS",
+        "description": "拥有超过5年的HTML、CSS、JavaScript、React和NextJS框架开发经验。"
+      },
+      "software": {
+        "title": "软件",
+        "subtitle": "开发",
+        "description": "熟悉相关后端技术，包括Node.js(Nestjs、Express、Koa)、Python、Java。"
+      },
+      "devops": {
+        "title": "运维",
+        "subtitle": "Docker, Github Actions",
+        "description": "熟悉Docker、GitHub Actions、Jenkins等Devops工具和流程。"
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "我的项目",
+    "clickToView": "点击查看详情",
+    "moreCount": "+{count} 更多",
+    "projects": {
+      "FameEX": {
+        "title": "FameEX-交易平台",
+        "description": "FameEX-交易平台，基于Next.js和Go开发的加密货币交易平台。提供了多种热门加密货币交易，比如BTC、ETH、USDT等。"
+      },
+      "Soca": {
+        "title": "Soca-AI求职平台",
+        "description": "Soca是一个基于React.js和Java开发的AI求职平台，它能帮助你修改简历，并通过扫描网络以寻找更适合你的工作。"
+      },
+      "eleme-loan": {
+        "title": "饿了么-借贷平台",
+        "description": "饿了么-借贷平台，基于React.js和Java开发的移动端h5页面，实现了借贷平台的所有功能，包括身份认证、借贷申请、借贷审核、借贷还款等。",
+        "noLinksText": "如想查看该项目，可通过移动端《饿了么》APP —— 我的 —— 我的钱包 —— 借钱 来查看详情"
+      },
+      "ibuy": {
+        "title": "ibuy购物商城-个人项目",
+        "description": "该项目是一个全栈电商项目，采用前后端分离的模式。前端基于Nextjs，后端基于Nestjs。目前已完成大部分主流程，支持商品展示、搜索、下单、支付、商品管理等功能"
+      }
+    }
+  },
+  "ExperienceSection": {
+    "title": "专业经历",
+    "experiences": {
+      "remote": {
+        "position": "Next.js全栈工程师",
+        "company": "远程工作",
+        "location": "远程",
+        "duration": "2024.7 - 至今",
+        "description": "在这段时间中，参与了很多项目的开发。比如Soca、FameEx等项目相关的开发。还参与了多个项目的维护工作，如参与RollIn项目中迁移react-testing-library单测库。"
+      },
+      "farben": {
+        "position": "Node.js全栈工程师",
+        "company": "法本信息",
+        "location": "上海",
+        "duration": "2023.5 - 2024.5",
+        "description": "在法本信息，我参与了项目管理平台的开发。一个基于React.js和Express开发的管理平台。我参与了该项目中大部分的前端开发和部分后端开发。如需求管理、项目管理、产品管理、采购管理等页面。以及权限管理、用户管理、角色管理等接口设计和实现。"
+      },
+      "beyondsoft": {
+        "position": "高级前端开发工程师",
+        "company": "博彦科技",
+        "location": "杭州",
+        "duration": "2019.8 - 2023.4",
+        "description": "参与了多个项目的开发，包括基于React和Java的信用贷平台以及相关的管理后台。在这两个项目中，我主要负责前端开发，包括移动端适配、功能实现、性能优化等。与产品经理紧密合作，优化转化漏斗并实施A/B测试框架，以推动增长计划。"
+      },
+      "chitu": {
+        "position": "前端开发工程师",
+        "company": "赤兔网络科技",
+        "location": "南京",
+        "duration": "2018.5 - 2019.7",
+        "description": "负责开发酒店官网以及酒店管理后台。在官网项目中基于Express实现ssr，优化网站SEO。在管理后台项目中，基于React实现酒店前台的房间选定等功能。"
+      }
+    }
+  },
+  "ContactSection": {
+    "title": "联系我",
+    "wechatId": "微信号：wowzqy",
+    "footer": "RyoZhu ©2025"
+  },
+  "ProjectDetailPage": {
+    "backToProjects": "返回项目",
+    "projectGallery": "项目图库",
+    "technologiesUsed": "使用的技术",
+    "viewLiveProject": "查看在线项目",
+    "viewSourceCode": "查看源代码",
+    "noLinksText": "暂无演示链接和源码地址"
+  },
+  "ProjectModal": {
+    "gallery": "图库",
+    "technologiesUsed": "使用的技术",
+    "viewLiveProject": "查看在线项目",
+    "viewSourceCode": "查看源代码",
+    "noLinksText": "暂无演示链接和源码地址"
+  }
+}

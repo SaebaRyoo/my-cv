@@ -2,11 +2,13 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
-import { projectData } from "@/components/project/data";
+import { useTranslations } from "next-intl";
+import { useProjectData } from "@/utils/projectData";
 
 // 滑动Gallery组件
 function ImageGallery({ images, projectTitle }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const t = useTranslations("ProjectModal");
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -20,7 +22,7 @@ function ImageGallery({ images, projectTitle }) {
 
   return (
     <div className="mb-6">
-      <h3 className="text-lg font-semibold text-white mb-3">Gallery</h3>
+      <h3 className="text-lg font-semibold text-white mb-3">{t("gallery")}</h3>
       <div className="relative">
         {/* 主图片容器 */}
         <div className="relative w-full">
@@ -123,6 +125,8 @@ function ImageGallery({ images, projectTitle }) {
 
 export default function ProjectModal({ params }) {
   const router = useRouter();
+  const t = useTranslations("ProjectModal");
+  const projectData = useProjectData();
   const project = projectData.find((p) => p.id === params.id);
 
   if (!project) {
@@ -186,7 +190,7 @@ export default function ProjectModal({ params }) {
           {/* Technologies */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-3">
-              Technologies Used
+              {t("technologiesUsed")}
             </h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
@@ -212,7 +216,7 @@ export default function ProjectModal({ params }) {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-6 py-3 bg-[#66d9ed] text-gray-900 rounded-lg font-semibold hover:bg-[#66d9ed]/90 transition-colors"
               >
-                View Live Project
+                {t("viewLiveProject")}
                 <svg
                   className="w-4 h-4 ml-2"
                   fill="none"
@@ -235,7 +239,7 @@ export default function ProjectModal({ params }) {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-6 py-3 border border-gray-600 text-white rounded-lg font-semibold hover:border-[#66d9ed] hover:text-[#66d9ed] transition-colors"
               >
-                View Source Code
+                {t("viewSourceCode")}
                 <svg
                   className="w-4 h-4 ml-2"
                   fill="currentColor"
@@ -248,7 +252,7 @@ export default function ProjectModal({ params }) {
             {(!project.link || project.link.trim() === "") &&
               (!project.github || project.github.trim() === "") && (
                 <div className="text-center py-3 text-gray-500 text-sm">
-                  {project.noLinksText || "暂无演示链接和源码地址"}
+                  {project.noLinksText || t("noLinksText")}
                 </div>
               )}
           </div>

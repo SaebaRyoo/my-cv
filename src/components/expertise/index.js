@@ -1,52 +1,19 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
-const expertiseData = [
-  {
-    id: 1,
-    icon: "/icon-react.svg",
-    iconAlt: "icon-react",
-    title: "Frontend Dev",
-    subtitle: "React, NextJS",
-    description:
-      "拥有超过5年的HTML、CSS、JavaScript、React和NextJS框架开发经验。",
-    className: "expertise-frontend",
-    borderClass:
-      "border-t-2 border-l-2 lg:border-r-1 border-r-2 border-b-2 lg:border-b-2",
-  },
-  {
-    id: 2,
-    icon: "/icon-computer.svg",
-    iconAlt: "icon-computer",
-    title: "Software",
-    subtitle: "Development",
-    description:
-      "熟悉相关后端技术，包括Node.js(Nestjs、Express、Koa)、Python、Java。",
-    className: "expertise-backend-development",
-    borderClass:
-      "border-t-0 lg:border-t-2 border-l-2 lg:border-l-1 lg:border-r-1 border-r-2 border-b-2",
-  },
-  {
-    id: 3,
-    icon: "/icon-computer.svg",
-    iconAlt: "devops",
-    title: "Devops",
-    subtitle: "Docker, Github Actions",
-    description: "熟悉Docker、GitHub Actions、Jenkins等Devops工具和流程。",
-    className: "expertise-cicd-development",
-    borderClass:
-      "border-t-0 lg:border-t-2 border-l-2 lg:border-l-1 border-r-2 lg:border-r-2 border-b-2",
-  },
-];
+import { useTranslations } from "next-intl";
+import { useExpertiseData } from "@/utils/expertiseData";
 
 export default function Expertise() {
+  const t = useTranslations("ExpertiseSection");
+  const expertiseData = useExpertiseData();
+
   return (
     <section className="min-h-screen w-full text-white py-10 sm:py-20 px-4 sm:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* 标题 */}
         <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-center mb-8 sm:mb-16">
-          My Expertise
+          {t("title")}
         </h2>
 
         <section className="w-full">

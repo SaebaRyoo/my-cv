@@ -1,5 +1,9 @@
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { use } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,14 +20,22 @@ export const metadata = {
   description: "Software Engineer & Front end Developer",
 };
 
-export default function RootLayout({ children, modal }) {
+export default function RootLayout({ children, modal, params }) {
+  const { locale } = use(params);
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        {modal}
+        <NextIntlClientProvider>
+          {children}
+          {modal}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
