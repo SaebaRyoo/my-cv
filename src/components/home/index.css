@@ -1,0 +1,121 @@
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  padding: 40px 20px;
+  margin: 4px;
+  color: #66d9ed;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+  /* 添加上下晃动动画 */
+  animation: bounce-vertical 2s ease-in-out infinite;
+}
+.btn-wrapper:hover {
+  background: #66d9ed;
+  color: #050801;
+  box-shadow: 0 0 5px #66d9ed, 0 0 25px #66d9ed, 0 0 50px #66d9ed,
+    0 0 200px #66d9ed;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  /* 鼠标悬停时暂停上下晃动，增强交互体验 */
+  animation-play-state: paused;
+}
+/* 
+hue-rotate() 滤镜会旋转元素的色相（色调）
+ */
+/* .btn-wrapper:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+.btn-wrapper:nth-child(2) {
+  filter: hue-rotate(110deg);
+} */
+.btn-wrapper span {
+  position: absolute;
+  display: block;
+}
+.btn-wrapper span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #66d9ed);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.btn-wrapper span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #66d9ed);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.btn-wrapper span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #66d9ed);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn-wrapper span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #66d9ed);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* 上下晃动动画 */
+@keyframes bounce-vertical {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

@@ -1,0 +1,22 @@
+<svg width="100" height="150" viewBox="0 0 100 150">
+  <!-- 按钮轮廓 -->
+  <rect x="20" y="20" width="60" height="100" rx="30" ry="30" fill="none" stroke="#ccc" stroke-width="2" />
+
+  <!-- 光线沿轮廓动画路径 -->
+  <path id="outline" d="M20,50 A30,30 0 0,1 80,50 L80,90 A30,30 0 0,1 20,90 Z" fill="none" stroke="none"/>
+
+  <!-- 光点 -->
+  <circle r="3" fill="cyan">
+    <animateMotion dur="2s" repeatCount="indefinite" keyTimes="0;0.9;1" keyPoints="0;1;1" fill="freeze">
+      <mpath href="#outline"/>
+    </animateMotion>
+  </circle>
+
+  <!-- 顶部指向箭头 -->
+  <g id="arrow" transform="translate(50, 20)">
+    <path d="M0,0 L0,10 M-5,5 L0,10 L5,5" stroke="cyan" stroke-width="2" fill="none" opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="1.8s" dur="0.2s" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,20" begin="2s" dur="0.4s" fill="freeze"/>
+    </path>
+  </g>
+</svg>

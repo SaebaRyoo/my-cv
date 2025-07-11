@@ -3,6 +3,8 @@ import Image from "next/image";
 import { animate, createScope, createSpring } from "animejs";
 import { useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { MoveDown } from "lucide-react";
+import "./index.css";
 
 export default function Home() {
   const root = useRef(null);
@@ -62,16 +64,16 @@ export default function Home() {
 
       <div
         aria-label="scroll-down"
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[8vh] h-[8vh] sm:w-[10vh] sm:h-[10vh] hover:cursor-pointer flex items-center justify-center group"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hover:cursor-pointer flex items-center justify-center group"
         onClick={scrollOneScreen}
       >
-        <Image
-          className="scroll-down group-hover:scale-110 transition-transform duration-300"
-          src="/scroll-down.svg"
-          alt="scroll-down"
-          width={100}
-          height={100}
-        />
+        <a className="btn-wrapper">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <MoveDown size={32} />
+        </a>
       </div>
     </section>
   );
